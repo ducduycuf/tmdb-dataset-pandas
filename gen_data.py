@@ -66,9 +66,9 @@ def generate_sellers(n):
         'country': ['Vietnam'] * n
     })
 
-def generate_products(n, categories_df, brands_df, sellers_df):
+def generate_products(n, categories_df, brands_df, sellers_df): #categories_df, brands_df, sellers_df -> ten cac ham goi execution o cuoi (output la df)
     product_ids = np.arange(1, n+1)
-    cat_ids = categories_df['category_id'].tolist()
+    cat_ids = categories_df['category_id'].tolist() 
     brand_ids = brands_df['brand_id'].tolist()
     seller_ids = sellers_df['seller_id'].tolist()
     prices = np.round(np.random.uniform(100000, 50000000, size=n), 2)
